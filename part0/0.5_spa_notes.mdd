@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+
+    User->>Browser: Goes to SPA URL
+    Browser->>Server: Sends GET /api/notes request
+    Server-->>Browser: Responds with notes JSON
+    Browser->>Browser: Renders notes on page

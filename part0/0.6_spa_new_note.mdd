@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+
+    User->>Browser: Types note content
+    User->>Browser: Clicks save button
+    Browser->>Server: Sends POST /api/notes with note data
+    Server-->>Browser: Responds with saved note
+    Browser->>Browser: Updates notes list on page
